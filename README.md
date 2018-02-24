@@ -6,7 +6,6 @@ An Amazon-like storefront with MySQL. The app will take in orders from customers
 <h2>
 Specifications and Functionality
 </h2>
-
 <p>A MySQL Database called <code>bamazon</code> has been created.</p>
 </li>
 <li>
