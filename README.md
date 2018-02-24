@@ -26,13 +26,11 @@ Specifications and Functionality
 <p>stock_quantity (how much of the product is available in stores)</p>
 </li>
 </ul>
-</li>
-<li>
 <p>This database has been populated with around 10 different products.</p>
-</li>
 <li>
 <p>A Node application called <code>bamazonCustomer.js</code> has been created. Running this application will first display all of the items available for sale. </p>
 </li>
+![Image of bamazonCustomer.js](https://github.com/venkatvenkataraman/bamazon/screenShots/bamazonCustomerJSinitialscreen.jpg)
 <li>
 <p>The app should then prompt users with two messages.</p>
 <ul>
