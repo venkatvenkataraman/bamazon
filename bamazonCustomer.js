@@ -121,12 +121,40 @@ function displayProducts() {
             console.log("THE TOTAL COST OF YOUR PURCHASE IS: "+ itemUnitsG + " (Units) x $" 
                  + itemPriceG + " = $" + (itemUnitsG*itemPriceG));
             console.log("THANK YOU AND BUY AGAIN!");
+            //Would they like to make another purchase?
+            inquirer
+              .prompt([{
+                  name: "continue",
+                  type: "input",
+                  message: "Interested in making another purchase? Type yes (y) or no (n).",
+                  validate: function(input) {
+                            var regExYes = new RegExp(/(y(?:es)?|1)/);
+                            var regExNo = new RegExp(/(n(?:o)?|1)/)
+                            if (regExYes.test(input) || regExNo.test(input)){
+                              return true;
+                            } else {
+                            return false;
+                            } //if
+                  } //validate
+                }]) //.prompt
+                .then (function(answer) {
+                  switch (answer.continue.split("")[0]) {
+                    case "y":
+                      displayProducts();
+                      break;
+                    case "n":
+                      connection.end();
+                      return;
+                  } //switch
+                }) // .then
+            
+
             //HOUSEKEEPING
             //Delete the product record if we find that updatedStockQuantityG happens to be 0.
             // if (updatedStockQuantityG === 0) {
                   
             // }
-            connection.end();
+            // connection.end();
             // console.log("Below is the updated product and availability picture\n");
             // console.table(res);
             // console.log(res);
