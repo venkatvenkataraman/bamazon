@@ -30,7 +30,7 @@ Specifications and Functionality
 <li>
 <p>A Node application called <code>bamazonCustomer.js</code> has been created. Running this application will first display all of the items available for sale. </p>
 </li>
-![Image of bamazonCustomer.js](https://github.com/venkatvenkataraman/bamazon/screenShots/bamazonCustomerJSinitialscreen.jpg)
+![Image of bamazonCustomer.js](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSinitialscreen.jpg)
 <li>
 <p>The app should then prompt users with two messages.</p>
 <ul>
