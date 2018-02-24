@@ -27,16 +27,14 @@ Specifications and Functionality
 </li>
 </ul>
 <p>This database has been populated with around 10 different products.</p>
-<li>
 <p>A Node application called <code>bamazonCustomer.js</code> has been created. Running this application will first display all of the items available for sale. </p>
-</li>
-![Image of bamazonCustomer.js](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSinitialscreen.jpg)
-<li>
+![Image of bamazonCustomer.js Initial Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSinitialscreen.jpg)
 <p>The app should then prompt users with two messages.</p>
 <ul>
 <li>The first should ask them the ID of the product they would like to buy.</li>
 <li>The second message should ask how many units of the product they would like to buy.</li>
 </ul>
+![Image of bamazonCustomer.js Product Purchase Query](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSinitialscreen2.jpg)
 </li>
 <li>
 <p>Once the customer has placed the order, the application checks if the store has enough of the product to meet the customer's request.</p>
@@ -50,7 +48,7 @@ Specifications and Functionality
 <li>This means updating the SQL database to reflect the remaining quantity.</li>
 <li>Once the update goes through, show the customer the total cost of their purchase.</li>
 </ul>
-</li>
+![Image of bamazonCustomer.js Product Purchase Completion](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSTransactionComplete.jpg)
 
 <h2>
 Challenge #2: Manager View (Next Level)
