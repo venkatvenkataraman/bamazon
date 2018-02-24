@@ -107,3 +107,7 @@ Challenge #2: Manager View (Next Level)
 ![Image of bamazonManager.js Newly Added Product Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSNewlyAddedProduct.jpg)
   </li>
   </ul>
+  
+  If you want to embed images, this is how you do it:
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
