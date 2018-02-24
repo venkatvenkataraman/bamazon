@@ -40,7 +40,6 @@ Specifications and Functionality
 <ul>
 <li>If not, the app logs a phrase like <code>Insufficient quantity!</code>, and then prevent the order from going through.</li>
 </ul>
-<li>
 <p>However, if your store <em>does</em> have enough of the product, you should fulfill the customer's order.</p>
 <ul>
 <li>This means updating the SQL database to reflect the remaining quantity.</li>
