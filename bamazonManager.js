@@ -20,13 +20,6 @@ connection.connect(function(err) {
   displayManagerMenu();
 });
 
-var itemIDG;
-var itemUnitsG;
-var itemPriceG;
-var productTableG;
-var updatedStockQuantityG;
-
-
   function displayManagerMenu() {
     inquirer
       .prompt([{
@@ -104,7 +97,6 @@ var updatedStockQuantityG;
               //     console.log(" ERROR: There is no such ID. Please enter a valid ID within the displayed range!");
               //     return false;
               // }
-              itemIDG = input;
               return true;
           } else {
               console.log(' ERROR: Please enter a valid ID "Number" within the range!');
@@ -119,75 +111,73 @@ var updatedStockQuantityG;
       validate: function validateItemID(input) {
           var regEx = new RegExp(/^[+\-]?\d+$/);
           if (regEx.test(input)) {
-            var addOrSubtract = input.split("")[0];
-            console.log("\n ", addOrSubtract);
-            var unitsArr = [];
-            var unitsStr;
-            var unitsNum;
-            switch (addOrSubtract) {
-              case "+": 
-                // console.log("It is a + case");
-                for (let index = 1; index < input.split("").length; index++) {
-                  unitsArr.push(input.split("")[index]);
-                }
-                unitsStr=unitsArr.join('');
-                unitsNum = parseInt(unitsStr);
-                //Add to inventory
-                break;
-      
-              case "-":
-                // console.log("It is a - case");
-                for (let index = 1; index < input.split("").length; index++) {
-                  unitsArr.push(input.split("")[index]);
-                }
-                unitsStr=unitsArr.join('');
-                unitsNum = parseInt(unitsStr);
-                //subtract from inventory
-                break;
-
-              case "1": case "2": case "3": case "4": case "5": case "6": case "7": case "8": case "9": 
-                // console.log("It is a Number case");
-                for (let index = 0; index < input.split("").length; index++) {
-                  unitsArr.push(input.split("")[index]);
-                }
-                unitsStr=unitsArr.join('');
-                unitsNum = parseInt(unitsStr);
-                addOrSubtract = "+";
-                //Add to inventory
-                break;
-            } //switch statement
-            //love notes to ourselves
-            // console.log("\n the UnitsArray", unitsArr);
-            // console.log("\n Parsed sign = ", addOrSubtract);
-            // console.log("\n Parsed number = ", unitsNum );
             return true;
         } //regex test
       } //validate
     }//this object
     ]) //inquirer .prompt
-    .then(function(addOrSubtract, unitsNum) {
-      console.log("Updating item quantities...at item_id " + itemIDG + "\n");
-      connection.query("SELECT * FROM products WHERE (item_id='itemIDG')", 
-        function (err, res) {
-            if (err) {console.log("First error spot!"); throw err;}
-            console.log(res);
-            switch (addOrSubtract) {
-              case "+":  updatedStockQuantityG = res.stock_quantity + unitsNum;
-                         break;
+    .then(function(answer) {
+      var itemID = answer.itemID;
+      var addOrSubtract = answer.itemUnits.split("")[0];
+      console.log("\n ", addOrSubtract);
+      var unitsArr = [];
+      var unitsStr;
+      var unitsNum;
+      switch (addOrSubtract) {
+        case "+": 
+          // console.log("It is a + case");
+          for (let index = 1; index < answer.itemUnits.split("").length; index++) {
+            unitsArr.push(answer.itemUnits.split("")[index]);
+          }
+          unitsStr=unitsArr.join('');
+          unitsNum = parseInt(unitsStr);
+          //Add to inventory
+          break;
 
-              case "-":  updatedStockQuantityG = res.stock_quantity - unitsNum;
-                         break;
-            }
-            var query = connection.query(
-               "UPDATE products SET ? WHERE ?",
-                [
-                  {
-                    stock_quantity: updatedStockQuantityG
-                  },
-                  {
-                    item_id: itemIDG
-                  }
-                ],
+        case "-":
+          // console.log("It is a - case");
+          for (let index = 1; index < answer.itemUnits.split("").length; index++) {
+            unitsArr.push(answer.itemUnits.split("")[index]);
+          }
+          unitsStr=unitsArr.join('');
+          unitsNum = parseInt(unitsStr);
+          //subtract from inventory
+          break;
+
+        case "1": case "2": case "3": case "4": case "5": case "6": case "7": case "8": case "9": 
+          // console.log("It is a Number case");
+          for (let index = 0; index < answer.itemUnits.split("").length; index++) {
+            unitsArr.push(answer.itemUnits.split("")[index]);
+          }
+          unitsStr=unitsArr.join('');
+          unitsNum = parseInt(unitsStr);
+          addOrSubtract = "+";
+          //Add to inventory
+          break;
+      } //switch statement
+      //love notes to ourselves
+      // console.log("\n the UnitsArray", unitsArr);
+      // console.log("\n Parsed sign = ", addOrSubtract);
+      // console.log("\n Parsed number = ", unitsNum );
+      // console.log("addOrSubtract = "+ addOrSubtract +" unitsNum = " + unitsNum, "\n");
+      if (addOrSubtract === "-") {
+        unitsNum *= -1;
+        // console.log(unitsNum);
+      } //if
+
+      console.log("Updating item quantities...at item_id " + itemID + " by " + unitsNum +"\n");
+           
+      var query = connection.query(
+            "UPDATE products SET stock_quantity= (stock_quantity + '"+ unitsNum +"') WHERE item_id = '" + itemID + "'",
+              //  "UPDATE products SET ? WHERE ?",
+              //   [
+              //     {
+              //       stock_quantity: stock_quantity + unitsNum
+              //     },
+              //     {
+              //       item_id: itemID
+              //     }
+              //   ],
                 function(err, res) {
                       // if (err) throw err;
                       if (err) {console.log("Second error spot!"); throw err;}
@@ -195,9 +185,8 @@ var updatedStockQuantityG;
                       displayManagerMenu();
                   }
               ); //var query
-        }
+              console.log("UPDATE query statemnt is: ", query.sql);
 
-        ); //connection.query
     })//.then(function(addOrSubtract...))
   }  //function addToInventory
 
