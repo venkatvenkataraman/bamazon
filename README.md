@@ -36,12 +36,10 @@ Specifications and Functionality
 </ul>
 ![Image of bamazonCustomer.js Product Purchase Query](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSinitialscreen2.jpg)
 </li>
-<li>
 <p>Once the customer has placed the order, the application checks if the store has enough of the product to meet the customer's request.</p>
 <ul>
 <li>If not, the app logs a phrase like <code>Insufficient quantity!</code>, and then prevent the order from going through.</li>
 </ul>
-</li>
 <li>
 <p>However, if your store <em>does</em> have enough of the product, you should fulfill the customer's order.</p>
 <ul>
@@ -89,3 +87,10 @@ Challenge #2: Manager View (Next Level)
 </ul>
 </li>
 </ul>
+<h3> bamazonManager.js Screenshots </h3>
+![Image of bamazonManager.js Initial Menu Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSinitialscreen1.jpg)
+![Image of bamazonManager.js Product For Sale Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSViewProductsForSale.jpg)
+![Image of bamazonManager.js Low Inventory Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSViewLowInventory.jpg)
+![Image of bamazonManager.js Add to Inventory Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSAddToInventory.jpg)
+![Image of bamazonManager.js Add New Product Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSAddNewProduct.jpg)
+![Image of bamazonManager.js Newly Added Product Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSNewlyAddedProduct.jpg)
