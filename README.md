@@ -104,17 +104,17 @@ Challenge #2: Manager View (Next Level)
   <li>
 <img src="screenShots/bamazonManagerJSViewLowInventory.jpg" alt="">
 ![Image of bamazonManager.js Low Inventory Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSViewLowInventory.jpg)
-  </li>
-  <li>
+</li>
+<li>
 <img src="screenShots/bamazonManagerJSAddToInventory.jpg" alt="">
 ![Image of bamazonManager.js Add to Inventory Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSAddToInventory.jpg)
-  </li>
-  <li>
+</li>
+<li>
 <img src="screenShots/bamazonManagerJSAddNewProduct.jpg" alt="">
 ![Image of bamazonManager.js Add New Product Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSAddNewProduct.jpg)
-  </li>
-  <li>
+</li>
+<li>
 <img src="screenShots/bamazonManagerJSNewlyAddedProduct.jpg" alt="">
 ![Image of bamazonManager.js Newly Added Product Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSNewlyAddedProduct.jpg)
-  </li>
-  </ul>
+ </li>
+ </ul>
