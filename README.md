@@ -28,7 +28,7 @@ Specifications and Functionality
 </ul>
 <p>This database has been populated with around 10 different products.</p>
 <p>A Node application called <code>bamazonCustomer.js</code> has been created. Running this application will first display all of the items available for sale. </p>
-![Image of bamazonCustomer.js Initial Screen]https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSinitialscreen.jpg
+![Image of bamazonCustomer.js Initial Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonCustomerJSinitialscreen.jpg)
 <p>The app should then prompt users with two messages.</p>
 <ul>
 <li>The first should ask them the ID of the product they would like to buy.</li>
