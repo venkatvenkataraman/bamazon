@@ -96,13 +96,13 @@ Challenge #2: Manager View (Next Level)
 <li>
 <img src="screenShots/bamazonManagerJSinitialscreen1.jpg" alt="">
 ![Image of bamazonManager.js Initial Menu Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSinitialscreen1.jpg)
-  </li>
-  <li>
- <img src="screenShots/bamazonManagerJSViewProductsForSale.jpg" alt="">
+</li>
+<li>
+<img src="screenShots/bamazonManagerJSViewProductsForSale.jpg" alt="">
 ![Image of bamazonManager.js Product For Sale Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSViewProductsForSale.jpg)
-  </li>
-  <li>
-<img src="screenShots/bamazonManagerJSViewLowInventory.jpg" alt="">
+</li>
+<li>
+<img src="screenShots/bamazonManagerJSNewlyAddedProduct.JPG" alt="">
 ![Image of bamazonManager.js Low Inventory Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSViewLowInventory.jpg)
 </li>
 <li>
@@ -116,5 +116,5 @@ Challenge #2: Manager View (Next Level)
 <li>
 <img src="screenShots/bamazonManagerJSNewlyAddedProduct.jpg" alt="">
 ![Image of bamazonManager.js Newly Added Product Screen](https://github.com/venkatvenkataraman/bamazon/tree/master/screenShots/bamazonManagerJSNewlyAddedProduct.jpg)
- </li>
- </ul>
+</li>
+</ul>
